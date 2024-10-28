@@ -77,7 +77,7 @@ class ProductRepository
                 $baseQuery->where('price', '<=', $price);
             });
 
-        return $baseQuery->paginate(16);
+        return $baseQuery->paginate(16)->withQueryString();
     }
 
     private function powerSet($data)
