@@ -18,4 +18,11 @@ class ProductController extends Controller
 
         return view('products/index', compact('products', 'searchMethods'));
     }
+
+    public function catalogue(Request $request)
+    {
+        $products = $this->productService->searchCatalogue($request);
+
+        return view('products/catalogue', compact('products', 'request'));
+    }
 }

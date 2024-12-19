@@ -13,4 +13,9 @@ class ProductService
     {
         return $this->productRepository->searchProduct($request);
     }
+
+    public function searchCatalogue(Request $request)
+    {
+        return $this->productRepository->searchCatalogue($request);
+    }
 }
